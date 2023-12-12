@@ -1,0 +1,20 @@
+<div class="container">
+  <div>
+    <h1 class="text-center mt-5 mb-5">Наши чайные коллекции</h1>
+  </div>
+  <div class="container-sm d-flex justify-content-center g-2">
+  <div class="row gap-3 " *ngFor="let tea_item of tea_products" >
+    <div class="card col-6 col-sm-4 " style="width: 18rem;">
+      <div class = "card-image " >
+        <img src="{{tea_item.image}}" class="card-img-top" alt="Tea-image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{tea_item.title}}</h5>
+        <p> 200 руб.</p>
+        <p class="card-text">{{tea_item.description}}</p>
+        <a class="btn btn-primary m-2" [routerLink]="['/catalog', tea_item.id]">Подробнее</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

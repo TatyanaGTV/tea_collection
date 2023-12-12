@@ -1,0 +1,112 @@
+<div class="container container-sm " #form>
+  <div>
+    <h1 class="text-center mt-5 mb-5" id="order" >Сделать заказ</h1>
+  </div>
+  <form class="row g-2 justify-content-between  mx-auto w-75 p-3" id="form" [formGroup]="order_form" >
+    <div class="col-sm-4">
+      <label for="inputName4" class="form-label" [class]="{'text-danger':name?.invalid && (name?.dirty
+             && name?.touched)}">Имя</label>
+      <input type="text" class="form-control" id="inputName4"
+             formControlName="name"
+             [class]="{'border-danger': name?.invalid && (name?.dirty
+             && name?.touched)}"
+             required>
+    </div>
+    <div class="text-danger" *ngIf="name?.invalid && (name?.dirty &&
+    name?.touched) ">
+      Поле имя заполнено неверно.
+      Имя может содержать только буквы.
+    </div>
+    <div class="col-sm-4">
+      <label for="inputSurname4" class="form-label" [class]="{'text-danger':lastName?.invalid && (lastName?.dirty
+             && lastName?.touched)}">Фамилия</label>
+      <input type="text" class="form-control" id="inputSurname4"
+             [class]="{'border-danger':lastName?.invalid && (lastName?.dirty
+             && lastName?.touched)}"
+             formControlName="last_name" required>
+    </div>
+    <div class="text-danger" *ngIf="lastName?.invalid && (lastName?.dirty &&
+    lastName?.touched) ">
+      Поле Фамилия заполнено неверно.
+      Фамилия может содержать только буквы.
+    </div>
+    <div class="col-sm-4">
+      <label for="inputPhone" class="form-label" [class]="{'text-danger':phone?.invalid && (phone?.dirty
+             && phone?.touched)}">Телефон</label>
+      <input type="text" class="form-control" id="inputPhone"
+             [class]="{'border-danger': phone?.invalid && (phone?.dirty
+             && phone?.touched)}"
+             formControlName="phone" required>
+    </div>
+    <div class="text-danger" *ngIf="phone?.invalid && (phone?.dirty &&
+    phone?.touched) ">
+      Поле телефон заполнено неверно.
+      Телефон может содержать только цифры.
+    </div>
+    <div class="col-6 p-1">
+      <label for="inputCountry2" class="form-label" [class]="{'text-danger':country?.invalid && (country?.dirty
+             && country?.touched)}">Страна</label>
+      <input type="text" class="form-control" id="inputCountry2"
+             [class]="{'border-danger':country?.invalid && (country?.dirty
+             && country?.touched)}"
+             formControlName="country" required>
+    </div>
+    <div class="text-danger" *ngIf="country?.invalid && (country?.dirty &&
+    country?.touched) ">
+      Поле Страна не заполнено.
+    </div>
+    <div class="col-6 p-1">
+        <label for="inputCity" class="form-label" [class]="{'text-danger':zip?.invalid && (zip?.dirty
+             && zip?.touched)}">Индекс</label>
+      <input type="text" class="form-control zip" id="inputCity"
+             [class]="{'border-danger': zip?.invalid && (zip?.dirty
+             && zip?.touched)}"
+             formControlName="zip" required>
+    </div>
+    <div class="text-danger" *ngIf="zip?.invalid && (zip?.dirty &&
+    zip?.touched) ">
+      Поле индекс не заполнено.
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label" [class]="{'text-danger':address?.invalid && (address?.dirty
+             && address?.touched)}">Адрес</label>
+      <input type="text" class="form-control" id="inputAddress"
+             [class]="{'border-danger': address?.invalid && (address?.dirty
+             && address?.touched)}"
+             formControlName="address" required>
+    </div>
+      <div class="text-danger" *ngIf="address?.invalid && (address?.dirty &&
+    address?.touched) ">
+      Поле Адрес заполнено неверно.
+    </div>
+    <div class="col-6 p-1">
+      <label for="inputProduct" class="form-label" >Товар</label>
+      <input type="text" class="form-control" id="inputProduct"
+             [attr.disabled]="disabled"
+             formControlName="product">
+    </div>
+    <div class="col-12">
+      <label for="inputComment" class="form-label" [class]="{'text-danger':comment?.invalid && (comment?.dirty
+             && comment?.touched)}">Комментарий</label>
+      <input type="text" class="form-control" id="inputComment"
+             [class]="{'border-danger': comment?.invalid && (comment?.dirty
+             && comment?.touched)}"
+             formControlName="comment" required>
+    </div>
+    <div class="text-danger" *ngIf="comment?.invalid && (comment?.dirty &&
+    comment?.touched) ">
+      Поле Комментарий не заполнено.
+
+    </div>
+    <div class="col-12">
+      <button type="button" class="btn btn-primary  mx-auto" id="btn" (click)="orderTheTea()">Отправить</button>
+    </div>
+  </form>
+  <div class="after_form" id="after_form">
+    <p class="after_form_p"  > Спасибо за заказ! Ждем Вас снова!</p>
+    <p class="after-form-refuse" [class.d-block]=  "IsSuccess === 0">
+      Произошла ошибка. Попробуйте еще раз
+    </p>
+  </div>
+</div>
+<div class="d-flex justify-content-center align-items-center m-3" [class.d-block]= "IsSuccess === 1">Спасибо за заказ! Ждем Вас снова!</div>

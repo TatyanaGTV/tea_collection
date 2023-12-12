@@ -1,0 +1,32 @@
+.carousel {
+  margin:72px 304px 72px 298px;
+}
+.popup{
+  display: none;
+  position: fixed;
+  background-color: rgba(196, 243, 243, 0.9);
+  top: 150px;
+  left: 600px;
+  z-index: 999;
+  border-radius: 15px;
+}
+.popup-container{
+  background-color: rgba(0, 0, 0, 0.42);
+  width: 100%;
+  height: 100%;
+}
+.accordion-item {
+  border: none;
+}
+.accordion-button::after {
+  background-image: url("../../../assets/images/Vector.png");
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../../../assets/images/Vector.png");
+}
+.btn.btn-primary {
+  text-decoration: none;
+}
+.modal-dialog {
+  pointer-events: auto;
+}

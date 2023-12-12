@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center align-items-center m-4">
+<div class="card col-6 col-sm-4 " style="width: 18rem;">
+  <div class = "card-image " >
+    <img src="{{tea_item.image}}" class="card-img-top" alt="Tea-image">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{tea_item.title}}</h5>
+    <p> 200 руб.</p>
+    <p class="card-text">{{tea_item.description}}</p>
+    <a class="btn btn-primary m-2" routerLink="/order" [queryParams]="{tea_item: tea_item.title}">Купить</a>
+  </div>
+</div>
+</div>
