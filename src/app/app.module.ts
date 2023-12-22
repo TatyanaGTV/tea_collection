@@ -8,7 +8,7 @@ import {OrderModule} from "./pages/order.module";
 import {CatalogModule} from "./pages/catalog.module";
 import {GetProductService} from "./services/get-product.service";
 import {MainModule} from "./pages/main.module";
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbAccordionModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -24,8 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CatalogModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
-
+    NgbModule,
+    NgbAccordionModule,
   ],
   providers: [HttpClient, GetProductService],
   bootstrap: [AppComponent]

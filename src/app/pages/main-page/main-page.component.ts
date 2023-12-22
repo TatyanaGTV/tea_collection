@@ -1,6 +1,7 @@
-import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, Renderer2, TemplateRef, ViewChild} from '@angular/core';
 import {Observable, Subscription} from "rxjs";
 import {Router} from "@angular/router";
+
 
 declare var $: any;
 
@@ -11,21 +12,22 @@ declare var $: any;
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-
   @ViewChild('popup')
+
+
+
+
+
   private popup!: ElementRef;
   private popup$!:Subscription;
 
+
   constructor(private rend: Renderer2,private router: Router ) {}
   name = 'Jquery Integration With Angular!';
-  isJqueryWorking: any;
 
 
 
   ngOnInit(): void {
-  //  $( function() : void {
-   //   $( "#accordion" ).accordion();
-   // } );
 
     let city = $('#inputCity');
     city.on('keypress', function(e:any) {
@@ -100,4 +102,6 @@ export class MainPageComponent implements OnInit {
   public close():void {
     this.rend.addClass( this.popup.nativeElement,  'd-none');
   }
+
+
 }
