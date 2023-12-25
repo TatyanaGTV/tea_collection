@@ -12,6 +12,7 @@ import {NgbAccordionModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -26,6 +27,7 @@ import {NgbAccordionModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     NgbModule,
     NgbAccordionModule,
+
   ],
   providers: [HttpClient, GetProductService],
   bootstrap: [AppComponent]

@@ -8,16 +8,18 @@ import {NgbAccordionModule} from "@ng-bootstrap/ng-bootstrap";
 import {NgbdAccordionBasic} from "./accordion/accordion.component";
 
 
+
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
     TeaCardComponent,
+    NgbdAccordionBasic,
+
   ],
   imports: [
     CommonModule,
     NgbAccordionModule,
-    NgbdAccordionBasic,
     SharedRoutingModule
   ],
   exports:[
