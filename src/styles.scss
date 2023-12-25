@@ -1,3 +1,5 @@
+//@import "./node_modules/bootstrap/scss/variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +36,52 @@ body {
 }
 .card {
   display: inline-block;
+}
+.accordion-item {
+  border: none;
+}
+.accordion-button::after {
+  background-image: url("/assets/images/Vector.png");
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("/assets/images/Vector.png");
+}
+.btn.btn-primary {
+  text-decoration: none;
+}
+.accordion-button  {
+  border: none;
+  color: white!important;
+  background-color: #0D6EFDFF;
+  margin-bottom: 10px;
+  outline: none;
+  font-weight: bold;
+  height: 67px;
+
+  &:not(.collapsed){
+    border: none;
+    background-color: #0D6EFDFF;
+    color:white;
+
+  }
+
+  &:active{
+    border: none;
+    outline: none;
+  }
+}
+.button:focus:not(:focus-visible){
+  outline: none!important;
+}
+.button:focus:not(:focus-visible){
+  outline: none!important;
+}
+.ngb-panel-0{
+  color:white;
+  border: none;
+}
+.ngb-accordion .accordion {
+  --bs-accordion-bg: none;
 }
 
 @media screen and (max-width:1024px) {
