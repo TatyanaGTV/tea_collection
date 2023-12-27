@@ -37,19 +37,20 @@ body {
 .card {
   display: inline-block;
 }
-.accordion-item {
+ .accordion .accordion-item {
   border: none;
+
 }
-.accordion-button::after {
+.accordion .accordion-button::after {
   background-image: url("/assets/images/Vector.png");
 }
-.accordion-button:not(.collapsed)::after {
+.accordion .accordion-button:not(.collapsed)::after {
   background-image: url("/assets/images/Vector.png");
 }
-.btn.btn-primary {
+.accordion .btn.btn-primary {
   text-decoration: none;
 }
-.accordion-button  {
+.accordion .accordion-button  {
   border: none;
   color: white!important;
   background-color: #0D6EFDFF;
@@ -57,6 +58,7 @@ body {
   outline: none;
   font-weight: bold;
   height: 67px;
+  --bs-accordion-bg: none;
 
   &:not(.collapsed){
     border: none;
@@ -70,11 +72,17 @@ body {
     outline: none;
   }
 }
-.button:focus:not(:focus-visible){
-  outline: none!important;
+.accordion .button:focus:not(:focus-visible){
+  outline: none !important;
+  border: none !important;
+
 }
-.button:focus:not(:focus-visible){
-  outline: none!important;
+.accordion .button:focus:not(:focus-visible){
+  outline: none;
+  border: none;
+}
+.accordion .accordion-button:focus{
+  --bs-accordion-btn-focus-box-shadow: none;
 }
 .ngb-panel-0{
   color:white;
@@ -82,6 +90,7 @@ body {
 }
 .ngb-accordion .accordion {
   --bs-accordion-bg: none;
+
 }
 
 @media screen and (max-width:1024px) {
