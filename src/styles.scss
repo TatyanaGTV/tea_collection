@@ -52,13 +52,14 @@ body {
 }
 .accordion .accordion-button  {
   border: none;
-  color: white!important;
+  color: white;
   background-color: #0D6EFDFF;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   outline: none;
   font-weight: bold;
   height: 67px;
   --bs-accordion-bg: none;
+  border-radius: 5px;
 
   &:not(.collapsed){
     border: none;
