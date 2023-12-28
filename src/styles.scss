@@ -1,4 +1,4 @@
-//@import "./node_modules/bootstrap/scss/variables";
+
 
 * {
   margin: 0;
@@ -21,13 +21,6 @@ body {
   color: white;
 }
 
-
-/*.hvr-radial-in:before {
-  background-color: #076BFF;
-}
-.hvr-radial-in {
-  background-color: #09cea0;
-}*/
 .btn-primary:hover {
   background-color: #09cea0;
 }
@@ -74,8 +67,8 @@ body {
   }
 }
 .accordion .button:focus:not(:focus-visible){
-  outline: none !important;
-  border: none !important;
+  outline: none;
+  border: none;
 
 }
 .accordion .button:focus:not(:focus-visible){
@@ -148,5 +141,5 @@ body {
   }
 }
 
-/* Importing Bootstrap SCSS file. */
+
 @import '~bootstrap/scss/bootstrap';
