@@ -12,8 +12,9 @@ export class GetProductService {
 
   }
 
+  public url = 'https://testologia.ru'? 'https://testologia.ru' :'https://testologia.site'
   getAllProducts (): Observable<GetTeaType []>{
-    return this.http.get <GetTeaType []>("https://testologia.site/tea")
+    return this.http.get <GetTeaType []>( this.url + "/tea")
       .pipe(
         map((result) => {
           this.teaProducts = result

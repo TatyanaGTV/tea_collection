@@ -13,11 +13,6 @@ declare var $: any;
 })
 export class MainPageComponent implements OnInit {
   @ViewChild('popup')
-
-
-
-
-
   private popup!: ElementRef;
   private popup$!:Subscription;
 
